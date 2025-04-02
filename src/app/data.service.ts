@@ -3,16 +3,15 @@ import { posts } from './post-data';
 import { Post } from './post';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-
   posts = posts;
 
-  constructor() { }
+  constructor() {}
 
-  getPostById(id:number): Post{
-    return this.posts.filter(post => post.id == id)[0];
+  getPostById(id: number): Post {
+    return this.posts.filter((post) => post.id == id)[0];
     // for(let i = 0; i < posts.length; i++){
     //   if(posts[i].id == id)
     //     return posts[i];
